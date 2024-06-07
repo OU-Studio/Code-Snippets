@@ -1,0 +1,35 @@
+<!-- Nav on scroll start -->
+<style>
+.fixHeader .cloneHeader{
+top: 0px;
+    transition: top 0.6s ease;
+  }
+  
+  .cloneHeader{
+    position: fixed;
+    top: -200px;
+    left: 0px;
+    width: 100%;
+    z-index: 999;
+    transition: top 0.3s ease;
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', init);
+  window.addEventListener('mercury:load', init);
+
+  function init(){
+    if(!$('.cloneHeader').length){
+      $('.Header--top').clone().addClass('cloneHeader').insertAfter($('.Header--top'))
+    }
+    window.addEventListener("scroll", (event) => {
+      if(window.scrollY > 300){
+        $('body').addClass('fixHeader')
+      }else{
+        $('body').removeClass('fixHeader')
+      }
+    });
+  }
+</script>
+<!-- Nav on scroll end -->
