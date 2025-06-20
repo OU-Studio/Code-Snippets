@@ -445,9 +445,7 @@ pointer-events: none;
 z-index: 9999;
 white-space: nowrap;
 }
-.ss-inspector-outline {
-outline: 2px dashed #e67e22 !important;
-}
+
 .ss-toast {
 position: fixed;
 bottom: 20px;
@@ -480,7 +478,6 @@ opacity: 1;
 
       // Always show static badges on sections
       document.querySelectorAll('section').forEach(section => {
-        section.classList.add('ss-inspector-outline');
         const id = section.id ? `#${section.id}` : '(no ID)';
         const rect = section.getBoundingClientRect();
         const clone = badge.cloneNode();
@@ -493,7 +490,6 @@ opacity: 1;
 
       // Hover and copy for .sqs-block
       document.querySelectorAll('.sqs-block').forEach(el => {
-        el.classList.add('ss-inspector-outline');
         el.addEventListener('mouseenter', () => {
           currentElement = el;
           const id = el.id ? `#${el.id}` : '(no ID)';
