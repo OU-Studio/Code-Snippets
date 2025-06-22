@@ -434,7 +434,7 @@ console.log('kk, masks')
     function initInspector() {
       const style = document.createElement('style');
       style.innerHTML = `
-.ss-inspector-badge {
+.sqs-edit-mode .ss-inspector-badge {
 position: absolute;
 background: rgba(0,0,0,0.7);
 color: #fff;
@@ -446,7 +446,7 @@ z-index: 9999;
 white-space: nowrap;
 }
 
-.ss-toast {
+.sqs-edit-mode .ss-toast {
 position: fixed;
 bottom: 20px;
 left: 50%;
@@ -460,7 +460,7 @@ z-index: 10000;
 opacity: 0;
 transition: opacity 0.3s ease-in-out;
 }
-.ss-toast.show {
+.sqs-edit-mode .ss-toast.show {
 opacity: 1;
 }
 `;
